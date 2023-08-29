@@ -9,6 +9,7 @@ const btnFilterInputs = document.querySelectorAll('[data-radio-input]')
 const taskCollection = todoContainerElement.children
 let tasksLeft = 0
 
+console.log(taskCollection)
 // Toggle between dark/light mode
 btnTheme.addEventListener('click', () => {
   document.body.classList.toggle('dark')
@@ -116,6 +117,7 @@ function resetFilter() {
 
 function displayActiveTasks() {
   const todoItemsElements = [...taskCollection]
+  console.log(todoContainerElement)
   todoItemsElements.forEach((todo) => {
     if (todo.classList.contains('completed')) {
       todo.classList.add('hidden')
@@ -125,6 +127,7 @@ function displayActiveTasks() {
 
 function displayCompletedTasks() {
   const todoItemsElements = [...taskCollection]
+  console.log(todoContainerElement)
   todoItemsElements.forEach((todo) => {
     if (!todo.classList.contains('completed')) {
       todo.classList.add('hidden')
